@@ -2,18 +2,19 @@ import java.util.ArrayList;
 
 public class Homework11 {
 
+public ArrayList<Integer> arr;
 	/* Finish the constructor and create any necessary instance
 	 * variables. The constructor should create and save an
 	 * ArrayList of int values
 	 */
 	public Homework11() {
-
+arr = new ArrayList<Integer>();
 	}
 
 	/* Return the stored ArrayList
 	 */
 	public ArrayList<Integer> getList() {
-
+return arr;
 	}
 
 	/* Fill the stored array list with integers, starting
@@ -21,7 +22,11 @@ public class Homework11 {
 	 * the resultant ArrayList should be n - m.
 	 */
 	public void problem1(int n, int m) {
-
+		int c = n;
+		for (int i = 0; i<(m-n); i++){
+			arr.add(c);
+			c+=1;
+		}
 	}
 
 	/* Remove from the stored array list all numbers that
@@ -30,7 +35,14 @@ public class Homework11 {
 	 * the right shift their indices down one.
 	 */
 	public void problem2(int n) {
-
+int c1 = 0;
+while (c1<arr.size()){
+	if((arr.get(c1)%n)==0){
+		arr.remove(c1);
+	} else{
+		c1+=1;
+	}
+}
 	}
 
 	/* Problem 3:
